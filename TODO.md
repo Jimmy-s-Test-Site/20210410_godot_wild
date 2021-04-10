@@ -2,10 +2,24 @@
 
 ## Art
 
-- [ ] fairy
+- [ ] fairy (+4 per anim)
+  - [ ] movement
+  - [ ] idle
+  - [ ] casting
+  - [ ] summoning
+  - [ ] taunting
 - [ ] minions
-  - [ ] 7, one per environment
+  - [ ] 7, one per environment (+4 per anim)
+    - [ ] attacking
+    - [ ] movement
+    - [ ] idle
+    - [ ] special
 - [ ] slot machine
+  - [ ] machine
+  - [ ] close window
+  - [ ] spinning dial
+    - [ ] 7 stills
+    - [ ] we dont know how many inbetweens
 - [ ] environment
   - [ ] ground
   - [ ] background
