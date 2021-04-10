@@ -1,5 +1,16 @@
 # TODO
 
+## Mechanics
+
+- [ ] fairy summons minion
+- [ ] chase and attack
+- [ ] slot machine teleport
+- [ ] main character attacks and movement
+- [ ] minion movement and attack
+- [ ] slot machine mini game
+- [ ] make a wish once you kill 7
+- [ ] buffs
+
 ## Art
 
 - [ ] main character - ghost (+4 frames)
@@ -21,7 +32,7 @@
     - [ ] special
 - [ ] slot machine
   - [ ] machine
-  - [ ] close window
+  - [ ] close windows
   - [ ] spinning dial
     - [ ] 7 stills
     - [ ] we dont know how many inbetweens
