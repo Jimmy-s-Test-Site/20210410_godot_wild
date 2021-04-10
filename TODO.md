@@ -26,9 +26,11 @@
 - [ ] Level 3 - Greed
   - Ash
 - [ ] Level 4 - Sloth
-  - Grass, tan grass
+  - Burned grass
 - [ ] Level 5 - Envy
-  - Grass flowers
+  - Grass
 - [ ] Level 6 - Gluttony
-  - 
+  - Grass + flowers
 - [ ] Level 7 - Pride
+  - Grass + flowers + trees
+
