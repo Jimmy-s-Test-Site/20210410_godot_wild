@@ -1,12 +1,13 @@
 # TODO
 
+## Art
+
 - [ ] fairy
 - [ ] minions
   - [ ] 7, one per environment
 - [ ] slot machine
 - [ ] environment
   - [ ] ground
-    - [ ] 
   - [ ] background
   - [ ] (optional) depending on level
   - [ ] rocks
@@ -14,15 +15,20 @@
   - [ ] flower
   - [ ] tree
 - [ ] splash screen
-  - [ ] Game Start, Game Loading, Game End
-
+  - [ ] Game Start, Game End
 
 ## Level order
 
-1. Wrath
-2. Lust
-3. Greed
-4. Sloth
-5. Envy
-6. Gluttony
-7. Pride
+- [ ] Level 1 - Wrath
+  - Lava
+- [ ] Level 2 - Lust
+  - Molten
+- [ ] Level 3 - Greed
+  - Ash
+- [ ] Level 4 - Sloth
+  - Grass, tan grass
+- [ ] Level 5 - Envy
+  - Grass flowers
+- [ ] Level 6 - Gluttony
+  - 
+- [ ] Level 7 - Pride
