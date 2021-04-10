@@ -2,11 +2,20 @@
 
 ## Mechanics
 
+- [ ] main character
+  - [x] movement
+  - [ ] ghost light attack
+  - [ ] violin attack
+  - [ ] death
+  - [ ] attack shuffling
+  - [ ] perks on death
+- [ ] minions
+  - [ ] follow player
+  - [ ] attacks
+  - [ ] special attack
 - [ ] fairy summons minion
 - [ ] chase and attack
 - [ ] slot machine teleport
-- [ ] main character attacks and movement
-- [ ] minion movement and attack
 - [ ] slot machine mini game
 - [ ] make a wish once you kill 7
 - [ ] buffs
