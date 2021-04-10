@@ -2,13 +2,18 @@
 
 ## Art
 
+- [ ] main character - ghost (+4 frames)
+  - [ ] shoot ghostly fire beam
+  - [ ] violin bow attack
+  - [ ] unlocks types of attacks
+  - [ ] moves
 - [ ] fairy (+4 per anim)
   - [ ] movement
   - [ ] idle
   - [ ] casting
   - [ ] summoning
   - [ ] taunting
-- [ ] minions
+- [ ] minions, designed after the prices
   - [ ] 7, one per environment (+4 per anim)
     - [ ] attacking
     - [ ] movement
