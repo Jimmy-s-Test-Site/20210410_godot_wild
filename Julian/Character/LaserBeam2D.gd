@@ -1,5 +1,7 @@
 extends RayCast2D
 
+export var rotation_speed = deg2rad(5)
+
 # Speed at which the laser extends when first fired, in pixels per seconds.
 export var cast_speed := 7000.0
 # Maximum length of the laser in pixels.
@@ -32,14 +34,6 @@ func _physics_process(delta: float) -> void:
 	var target_rotation = (self.get_global_mouse_position() - self.global_position).angle()
 	
 	self.rotation = target_rotation
-	
-	#var rotation_speed = deg2rad(5)
-	#
-	#print(target_rotation, 5)
-	#	self.rotation = target_rotation
-	#else:
-	#	if target_rotation > 0: self.rotation += rotation_speed
-	#	if target_rotation < 0: self.rotation -= rotation_speed
 	
 	self.cast_to = (self.cast_to + Vector2.RIGHT * self.cast_speed * delta).clamped(self.max_length)
 	self.cast_beam()
