@@ -19,6 +19,16 @@ shape = SubResource( 1 )
 scale = Vector2( 14.1701, 0.292145 )
 texture = ExtResource( 1 )
 
+[node name="Platform2" type="StaticBody2D" parent="."]
+position = Vector2( 856.46, 441.263 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Platform2/CollisionShape2D"]
+scale = Vector2( 14.1701, 0.292145 )
+texture = ExtResource( 1 )
+
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 512.348, 179.097 )
 player_character_path = NodePath("../Character")

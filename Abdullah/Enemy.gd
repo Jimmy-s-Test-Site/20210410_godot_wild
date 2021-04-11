@@ -12,6 +12,7 @@ export (int) var  movement_speed = 100
 export (int) var jump_speed
 
 export (int) var attack_power
+export (int) var aggro_range = 500
 export (int) var health = 1
 
 export (int) var gravity = 250
@@ -45,7 +46,7 @@ func health_manager():
 		self.queue_free()
 
 func attack_manager():
-	if direction_to_move > (100) or direction_to_move < (-100):
+	if direction_to_move > (100) or direction_to_move < (-100) or direction_to_move == 0:
 		$"Attack Area/Range".disabled = true
 	else:
 		$"Attack Area/Range".disabled = false
@@ -55,6 +56,8 @@ func animation_manager():
 
 func find_character():
 	self.direction_to_move = self.position.x - player_character.position.x
+	if direction_to_move > aggro_range or direction_to_move < -aggro_range:
+		direction_to_move = 0
 
 func _ready():
 	pass # Replace with function body.
