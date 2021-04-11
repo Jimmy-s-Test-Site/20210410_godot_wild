@@ -21,7 +21,7 @@ onready var beam_particles := $BeamParticles2D
 onready var line_width: float = fill.width
 
 func _ready() -> void:
-	set_physics_process(false)
+	self.set_physics_process(false)
 	fill.points[1] = Vector2.ZERO
 
 func _unhandled_input(event : InputEvent) -> void:
@@ -29,62 +29,57 @@ func _unhandled_input(event : InputEvent) -> void:
 		self.is_casting = event.pressed
 
 func _physics_process(delta: float) -> void:
-	var target_rotation = (get_global_mouse_position() - self.global_position).angle()
+	var target_rotation = (self.get_global_mouse_position() - self.global_position).angle()
 	
-	var rotation_speed = deg2rad(5)
+	self.rotation = target_rotation
 	
-	if abs(self.rotation - target_rotation) < deg2rad(5):
-		self.rotation = target_rotation
-	else:
-		if target_rotation > 0: self.rotation += rotation_speed
-		if target_rotation < 0: self.rotation -= rotation_speed
+	#var rotation_speed = deg2rad(5)
+	#
+	#print(target_rotation, 5)
+	#	self.rotation = target_rotation
+	#else:
+	#	if target_rotation > 0: self.rotation += rotation_speed
+	#	if target_rotation < 0: self.rotation -= rotation_speed
 	
-	self.cast_to = (cast_to + Vector2.RIGHT * cast_speed * delta).clamped(max_length)
+	self.cast_to = (self.cast_to + Vector2.RIGHT * self.cast_speed * delta).clamped(self.max_length)
 	self.cast_beam()
 
 func set_is_casting(cast: bool) -> void:
 	is_casting = cast
 	
-	if is_casting:
-		cast_to = Vector2.ZERO
-		fill.points[1] = cast_to
-		appear()
+	if self.is_casting:
+		self.cast_to = Vector2.ZERO
+		self.fill.points[1] = self.cast_to
+		self.appear()
 	else:
-		collision_particles.emitting = false
-		disappear()
+		self.collision_particles.emitting = false
+		self.disappear()
 
-	set_physics_process(is_casting)
-	beam_particles.emitting = is_casting
-	casting_particles.emitting = is_casting
+	self.set_physics_process(self.is_casting)
+	self.beam_particles.emitting = self.is_casting
+	self.casting_particles.emitting = self.is_casting
 
-
-# Controls the emission of particles and extends the Line2D to `cast_to` or the ray's 
-# collision point, whichever is closest.
 func cast_beam() -> void:
-	var cast_point := cast_to
-
-	force_raycast_update()
-	collision_particles.emitting = is_colliding()
-
-	if is_colliding():
-		cast_point = to_local(get_collision_point())
-		collision_particles.global_rotation = get_collision_normal().angle()
-		collision_particles.position = cast_point
-
-	fill.points[1] = cast_point
-	beam_particles.position = cast_point * 0.5
-	beam_particles.process_material.emission_box_extents.x = cast_point.length() * 0.5
-
+	var cast_point := self.cast_to
+	
+	self.force_raycast_update()
+	self.collision_particles.emitting = self.is_colliding()
+	
+	if self.is_colliding():
+		cast_point = self.to_local(self.get_collision_point())
+		self.collision_particles.global_rotation = self.get_collision_normal().angle()
+		self.collision_particles.position = cast_point
+	
+	self.fill.points[1] = cast_point
+	self.beam_particles.position = cast_point * 0.5
+	self.beam_particles.process_material.emission_box_extents.x = cast_point.length() * 0.5
 
 func appear() -> void:
-	if tween.is_active():
-		tween.stop_all()
-	tween.interpolate_property(fill, "width", 0, line_width, growth_time * 2)
-	tween.start()
-
+	if self.tween.is_active(): self.tween.stop_all()
+	self.tween.interpolate_property(self.fill, "width", 0, self.line_width, self.growth_time * 2)
+	self.tween.start()
 
 func disappear() -> void:
-	if tween.is_active():
-		tween.stop_all()
-	tween.interpolate_property(fill, "width", fill.width, 0, growth_time)
-	tween.start()
+	if self.tween.is_active(): self.tween.stop_all()
+	self.tween.interpolate_property(self.fill, "width", self.fill.width, 0, self.growth_time)
+	self.tween.start()
