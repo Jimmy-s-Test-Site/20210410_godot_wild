@@ -30,3 +30,4 @@ texture = SubResource( 2 )
 color = Color( 0.7, 0.7, 0.7, 1 )
 
 [node name="LaserBeam2D" parent="." instance=ExtResource( 4 )]
+rotation_speed = 0.06
