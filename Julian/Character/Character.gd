@@ -18,7 +18,6 @@ func _physics_process(delta : float) -> void:
 		self.input_manager()
 		self.movement_manager(delta)
 		self.attack_manager()
-		self.death_manager()
 		self.animation_manager()
 
 func input_manager() -> void:
@@ -43,9 +42,6 @@ func movement_manager(delta : float) -> void:
 	self.velocity = self.move_and_slide(self.velocity, Vector2.UP)
 
 func attack_manager():
-	pass
-
-func death_manager():
 	pass
 
 func animation_manager():
