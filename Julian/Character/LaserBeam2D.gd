@@ -1,17 +1,13 @@
 extends RayCast2D
 
 export var rotation_speed = deg2rad(5)
-
 # Speed at which the laser extends when first fired, in pixels per seconds.
 export var cast_speed := 7000.0
-# Maximum length of the laser in pixels.
 export var max_length := 1400.0
-# Base duration of the tween animation in seconds.
 export var growth_time := 0.1
 
 # If `true`, the laser is firing.
 # It plays appearing and disappearing animations when it's not animating.
-# See `appear()` and `disappear()` for more information.
 var is_casting := false setget set_is_casting
 
 onready var fill := $FillLine2D
@@ -33,7 +29,15 @@ func _unhandled_input(event : InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	var target_rotation = (self.get_global_mouse_position() - self.global_position).angle()
 	
-	self.rotation = target_rotation
+	#self.rotation = target_rotation
+	var dir = self.get_angle_to(self.get_global_mouse_position())
+	
+	if abs(dir) < self.rotation_speed:
+		self.rotation += dir
+	else:
+		if dir > 0: self.rotation += self.rotation_speed
+		if dir < 0: self.rotation -= self.rotation_speed
+	
 	
 	self.cast_to = (self.cast_to + Vector2.RIGHT * self.cast_speed * delta).clamped(self.max_length)
 	self.cast_beam()
