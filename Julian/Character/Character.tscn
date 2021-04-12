@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Art/icon.png" type="Texture" id=1]
 [ext_resource path="res://Julian/Character/Character.gd" type="Script" id=2]
@@ -7,9 +7,11 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 32 )
 
-[sub_resource type="StreamTexture" id=2]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 36, 36 )
+
+[sub_resource type="StreamTexture" id=3]
 flags = 4
-load_path = "res://.import/light_mask_1.png-31c3f5ed92928ea0437e4f3ecf99bd37.stex"
 
 [node name="Character" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -17,17 +19,25 @@ script = ExtResource( 2 )
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
 visible = false
-texture = SubResource( 2 )
+texture = SubResource( 3 )
 color = Color( 0.7, 0.7, 0.7, 1 )
 
 [node name="LaserBeam2D" parent="." instance=ExtResource( 4 )]
 rotation_speed = 0.06
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]
