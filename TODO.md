@@ -60,7 +60,7 @@
 
 - [X] Level 1 - Wrath
   - Lava
-- [ ] Level 2 - Lust
+- [X] Level 2 - Lust
   - Molten
 - [ ] Level 3 - Greed
   - Ash
