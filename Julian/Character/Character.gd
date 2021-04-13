@@ -46,3 +46,8 @@ func attack_manager():
 
 func animation_manager():
 	pass
+
+func _on_Hitbox_body_entered(body):
+	if body.name.begins_with("Enemy"):
+		# die when touched
+		self.queue_free()
