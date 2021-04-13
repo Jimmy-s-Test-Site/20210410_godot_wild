@@ -58,7 +58,7 @@
 
 ## Level order
 
-- [ ] Level 1 - Wrath
+- [X] Level 1 - Wrath
   - Lava
 - [ ] Level 2 - Lust
   - Molten
