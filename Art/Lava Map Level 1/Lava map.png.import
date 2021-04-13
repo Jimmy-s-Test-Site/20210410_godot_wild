@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/molten map.png-6995b63ee321de8623fcd84df7e120fa.stex"
+path="res://.import/Lava map.png-ecc115fedeadac36f37572a1bcc2155d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Level Two Molten/molten map.png"
-dest_files=[ "res://.import/molten map.png-6995b63ee321de8623fcd84df7e120fa.stex" ]
+source_file="res://Art/Lava Map Level 1/Lava map.png"
+dest_files=[ "res://.import/Lava map.png-ecc115fedeadac36f37572a1bcc2155d.stex" ]
 
 [params]
 
