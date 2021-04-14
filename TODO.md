@@ -51,7 +51,6 @@
 - [ ] environment
   - [ ] ground (one per level)
   - [ ] background
-  - [ ] (optional) depending on level
   - [ ] rocks
   - [ ] grass
   - [ ] flower
