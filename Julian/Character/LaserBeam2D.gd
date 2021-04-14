@@ -18,6 +18,8 @@ onready var beam_particles := $BeamParticles2D
 
 onready var line_width: float = fill.width
 
+var snap_to_mouse_next_frame = false
+
 func _ready() -> void:
 	self.set_physics_process(false)
 	fill.points[1] = Vector2.ZERO
@@ -29,7 +31,10 @@ func _unhandled_input(event : InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	var target_rotation = (self.get_global_mouse_position() - self.global_position).angle()
 	
-	#self.rotation = target_rotation
+	if self.snap_to_mouse_next_frame:
+		self.rotation = target_rotation
+		self.snap_to_mouse_next_frame = false
+	
 	var dir = self.get_angle_to(self.get_global_mouse_position())
 	
 	if abs(dir) < self.rotation_speed:

@@ -14,7 +14,7 @@ var input = {
 }
 
 func _ready() -> void:
-	$AnimationPlayer.play("main")
+	$AnimationPlayer.play("main_right")
 
 func _physics_process(delta : float) -> void:
 	if alive:
@@ -47,8 +47,20 @@ func movement_manager(delta : float) -> void:
 func attack_manager():
 	pass
 
+var facing_direction = -1.0
+
 func animation_manager():
-	pass
+	var new_facing_direction = sign(self.get_global_mouse_position().x - self.global_position.x)
+	
+	if self.facing_direction != new_facing_direction:
+		if self.facing_direction > 0:
+			$AnimationPlayer.play("main_right")
+		else:
+			$AnimationPlayer.play("main_left")
+		
+		self.facing_direction = new_facing_direction
+		
+		$LaserBeam2D.snap_to_mouse_next_frame = true
 
 func _on_Hitbox_body_entered(body):
 	if body.name.begins_with("Enemy"):
