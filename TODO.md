@@ -56,8 +56,9 @@
   - [ ] grass
   - [ ] flower
   - [ ] tree
-- [ ] splash screen
-  - [ ] Game Start, Game End
+- [x] splash screen
+- [ ] Game Start Cover
+- [ ] Game End Cover
 
 ## Level order
 
