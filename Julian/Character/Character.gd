@@ -13,6 +13,9 @@ var input = {
 	jump = false
 }
 
+func _ready() -> void:
+	$AnimationPlayer.play("main")
+
 func _physics_process(delta : float) -> void:
 	if alive:
 		self.input_manager()
