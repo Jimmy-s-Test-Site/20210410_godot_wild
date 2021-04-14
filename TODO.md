@@ -62,7 +62,7 @@
   - Lava
 - [X] Level 2 - Lust
   - Molten
-- [ ] Level 3 - Greed
+- [X] Level 3 - Greed
   - Ash
 - [ ] Level 4 - Sloth
   - Burned grass
