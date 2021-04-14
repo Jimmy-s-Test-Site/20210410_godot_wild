@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Lava map.png-ecc115fedeadac36f37572a1bcc2155d.stex"
+path="res://.import/Level Three Ash.png-19221940f79df1386c73b974fc6225cd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Lava Map Level 1/Lava map.png"
-dest_files=[ "res://.import/Lava map.png-ecc115fedeadac36f37572a1bcc2155d.stex" ]
+source_file="res://Art/Atlas's of each map/Level Three Ash.png"
+dest_files=[ "res://.import/Level Three Ash.png-19221940f79df1386c73b974fc6225cd.stex" ]
 
 [params]
 

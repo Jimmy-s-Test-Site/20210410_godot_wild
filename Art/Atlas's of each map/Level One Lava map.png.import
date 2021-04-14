@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Lava Map 2.png-d8332a3504cc984e5d999e14d64d6dd5.stex"
+path="res://.import/Level One Lava map.png-0ab613b0b2c5d871f25e4f96a319324a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Lava Map Level 1/Lava Map 2.png"
-dest_files=[ "res://.import/Lava Map 2.png-d8332a3504cc984e5d999e14d64d6dd5.stex" ]
+source_file="res://Art/Atlas's of each map/Level One Lava map.png"
+dest_files=[ "res://.import/Level One Lava map.png-0ab613b0b2c5d871f25e4f96a319324a.stex" ]
 
 [params]
 
