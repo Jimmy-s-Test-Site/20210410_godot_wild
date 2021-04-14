@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Abdullah/FirePillar.gd" type="Script" id=1]
+[ext_resource path="res://Abdullah/Fairy.tscn" type="PackedScene" id=2]
+
+[node name="FirePillarMarker" type="Node2D"]
+script = ExtResource( 1 )
+Fairy = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
