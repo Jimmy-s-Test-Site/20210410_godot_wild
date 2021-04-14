@@ -71,7 +71,7 @@
   - Burned grass
 - [ ] Level 5 - Envy
   - Grass
-- [ ] Level 6 - Gluttony
+- [X] Level 6 - Gluttony
   - Grass + flowers
 - [ ] Level 7 - Pride
   - Grass + flowers + trees
