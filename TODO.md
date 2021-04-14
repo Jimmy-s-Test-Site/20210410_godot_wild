@@ -26,10 +26,10 @@
 ## Art
 
 - [ ] main character - ghost (+4 frames)
-  - [ ] shoot ghostly fire beam
+  - [x] shoot ghostly fire beam
   - [ ] violin bow attack
   - [ ] unlocks types of attacks
-  - [ ] moves
+  - [x] idle/movement
 - [ ] fairy (+4 per anim)
   - [x] movement
   - [x] idle
