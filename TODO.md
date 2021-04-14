@@ -4,21 +4,24 @@
 
 - [ ] main character
   - [x] movement
-  - [ ] ghost light attack
+  - [x] ghost light attack
   - [ ] violin attack
-  - [ ] death
+  - [x] death
   - [ ] attack shuffling
   - [ ] perks on death
+  - [ ] buffs
+  - [ ] make a wish once you kill 7
 - [ ] minions
-  - [ ] follow player
+  - [x] follow player
   - [ ] attacks
   - [ ] special attack
-- [ ] fairy summons minion
-- [ ] chase and attack
-- [ ] slot machine teleport
-- [ ] slot machine mini game
-- [ ] make a wish once you kill 7
-- [ ] buffs
+- [ ] fairy
+  - [ ] summon minions
+  - [x] follow player
+  - [ ] taunt
+- [ ] slot machine
+  - [ ] teleport
+  - [ ] mini game
 
 ## Art
 
@@ -28,11 +31,11 @@
   - [ ] unlocks types of attacks
   - [ ] moves
 - [ ] fairy (+4 per anim)
-  - [ ] movement
-  - [ ] idle
-  - [ ] casting
+  - [x] movement
+  - [x] idle
+  - [x] casting
   - [ ] summoning
-  - [ ] taunting
+  - [x] taunting
 - [ ] minions, designed after the prices
   - [ ] 7, one per environment (+4 per anim)
     - [ ] attacking
@@ -46,25 +49,25 @@
     - [ ] 7 stills
     - [ ] we dont know how many inbetweens
 - [ ] environment
-  - [ ] ground
+  - [ ] ground (one per level)
   - [ ] background
-  - [ ] (optional) depending on level
   - [ ] rocks
   - [ ] grass
   - [ ] flower
   - [ ] tree
-- [ ] splash screen
-  - [ ] Game Start, Game End
+- [x] splash screen
+- [ ] Game Start Cover
+- [ ] Game End Cover
 
 ## Level order
 
-- [ ] Level 1 - Wrath
+- [X] Level 1 - Wrath
   - Lava
-- [ ] Level 2 - Lust
+- [X] Level 2 - Lust
   - Molten
-- [ ] Level 3 - Greed
+- [X] Level 3 - Greed
   - Ash
-- [ ] Level 4 - Sloth
+- [X] Level 4 - Sloth
   - Burned grass
 - [ ] Level 5 - Envy
   - Grass
