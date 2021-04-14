@@ -64,7 +64,7 @@
   - Molten
 - [X] Level 3 - Greed
   - Ash
-- [ ] Level 4 - Sloth
+- [X] Level 4 - Sloth
   - Burned grass
 - [ ] Level 5 - Envy
   - Grass
