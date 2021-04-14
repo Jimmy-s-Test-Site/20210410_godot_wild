@@ -159,3 +159,15 @@ texture = ExtResource( 2 )
 [node name="x marks trap5" type="Sprite" parent="TileMap"]
 position = Vector2( 1601.91, 1848.53 )
 texture = ExtResource( 2 )
+
+[node name="x marks trap6" type="Sprite" parent="TileMap"]
+position = Vector2( 1345.05, 741.493 )
+texture = ExtResource( 2 )
+
+[node name="x marks trap7" type="Sprite" parent="TileMap"]
+position = Vector2( 2805.21, 795.162 )
+texture = ExtResource( 2 )
+
+[node name="x marks trap8" type="Sprite" parent="TileMap"]
+position = Vector2( -63.8314, 1175.99 )
+texture = ExtResource( 2 )
