@@ -58,7 +58,7 @@ func set_is_casting(cast: bool) -> void:
 		self.disappear()
 	
 	$CollisionParticles2D/CollisionArea2D/CollisionShape2D.disabled = not self.is_casting
-
+	
 	self.set_physics_process(self.is_casting)
 	self.beam_particles.emitting = self.is_casting
 	self.casting_particles.emitting = self.is_casting
