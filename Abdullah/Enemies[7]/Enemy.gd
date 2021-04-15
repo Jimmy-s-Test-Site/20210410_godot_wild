@@ -9,17 +9,17 @@ export (NodePath) var player_character_path
 onready var player_character = self.get_node(player_character_path)
 
 export (int) var  movement_speed = 100
-export (int) var jump_speed
 
-export (int) var attack_power
 export (int) var aggro_range = 500
 export (int) var health = 1
 
 export (int) var gravity = 250
 
 var velocity = Vector2.ZERO
+var is_being_lazered = false
 var is_alive = true
 var direction_to_move
+var timer_length = .3
 
 func movement_manager(delta : float):
 	self.velocity.x = 0
@@ -54,6 +54,7 @@ func attack_manager():
 func animation_manager():
 	pass
 
+
 func find_character():
 	self.direction_to_move = self.position.x - player_character.position.x
 	if direction_to_move > aggro_range or direction_to_move < -aggro_range:
@@ -70,6 +71,7 @@ func _process(delta):
 		self.find_character()
 		self.movement_manager(delta)
 		self.attack_manager()
+		
 	
 
 
@@ -80,8 +82,22 @@ func _on_Attack_Area_body_entered(body):
 
 
 
+func _on_HitBox_area_entered(area):
+	if area.name == "CollisionArea2D":
+		var damage = 1
+		self.health -= damage
+		self.is_being_lazered = true
+		$Timer.start(self.timer_length)
 
-func _on_HitBox_body_entered(body):
-	print(body.name)
-	var damage = 1#body.damage
-	self.health -= 1
+
+func _on_HitBox_area_exited(area):
+	if area.name == "CollisionArea2D":
+		self.is_being_lazered = false
+		$Timer.stop()
+	
+
+
+func _on_Timer_timeout():
+	if self.is_being_lazered == true:
+		self.health -= 1
+		$Timer.start(self.timer_length)
