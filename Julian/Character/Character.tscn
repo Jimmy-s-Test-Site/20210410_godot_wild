@@ -107,7 +107,7 @@ current = true
 texture = ExtResource( 1 )
 flip_h = true
 hframes = 11
-frame = 5
+frame = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 7, 1 )
@@ -126,7 +126,7 @@ texture = SubResource( 3 )
 color = Color( 0.7, 0.7, 0.7, 1 )
 
 [node name="LaserBeam2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( -21, 1 )
+position = Vector2( -21, -1 )
 rotation_speed = 0.06
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
