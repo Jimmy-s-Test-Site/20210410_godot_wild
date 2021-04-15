@@ -4,6 +4,8 @@ export(int) var run_speed = 350
 export(int) var jump_speed = -1000
 export(int) var gravity = 2500
 
+var facing_direction = 1.0
+
 var alive = true
 
 var velocity = Vector2.ZERO
@@ -46,8 +48,6 @@ func movement_manager(delta : float) -> void:
 
 func attack_manager():
 	pass
-
-var facing_direction = -1.0
 
 func animation_manager():
 	var new_facing_direction = sign(self.get_global_mouse_position().x - self.global_position.x)
