@@ -1,0 +1,14 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Julian/Game/Game.gd" type="Script" id=1]
+[ext_resource path="res://Julian/Levels/Level1_Wrath.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Julian/Levels/Level5_Envy.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Julian/Levels/Level6_Gluttony.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Julian/Levels/Level2_Lust.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Julian/Levels/Level3_Greed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Julian/Levels/Level4_Sloth.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Julian/Levels/Level7_Pride.tscn" type="PackedScene" id=8]
+
+[node name="Game" type="Node2D"]
+script = ExtResource( 1 )
+levels = [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 8 ) ]
