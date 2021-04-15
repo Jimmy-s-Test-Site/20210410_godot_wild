@@ -54,9 +54,11 @@ func set_is_casting(cast: bool) -> void:
 		self.cast_to = Vector2.ZERO
 		self.fill.points[1] = self.cast_to
 		self.appear()
+		$CollisionParticles2D/CollisionArea2D/CollisionShape2D.disabled = false
 	else:
 		self.collision_particles.emitting = false
 		self.disappear()
+		$CollisionParticles2D/CollisionArea2D/CollisionShape2D.disabled = true
 
 	self.set_physics_process(self.is_casting)
 	self.beam_particles.emitting = self.is_casting
