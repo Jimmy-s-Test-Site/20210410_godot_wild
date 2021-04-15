@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Game_Over_Without_Buff.ogg-9e8da10b5a22e1c7ed29de11cefe8a96.oggstr"
+
+[deps]
+
+source_file="res://Audio/Game_Over_Without_Buff.ogg"
+dest_files=[ "res://.import/Game_Over_Without_Buff.ogg-9e8da10b5a22e1c7ed29de11cefe8a96.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

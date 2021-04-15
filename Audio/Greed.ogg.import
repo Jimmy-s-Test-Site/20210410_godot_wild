@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Greed.ogg-972a5af60dc0a8afc614c30edb2418ce.oggstr"
+
+[deps]
+
+source_file="res://Audio/Greed.ogg"
+dest_files=[ "res://.import/Greed.ogg-972a5af60dc0a8afc614c30edb2418ce.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

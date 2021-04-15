@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Lust.ogg-8747a47ab0036c43ebcbdfd3f9d4c7e3.oggstr"
+
+[deps]
+
+source_file="res://Audio/Lust.ogg"
+dest_files=[ "res://.import/Lust.ogg-8747a47ab0036c43ebcbdfd3f9d4c7e3.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
