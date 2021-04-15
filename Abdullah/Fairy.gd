@@ -8,6 +8,7 @@ export(int) var speed = 4000
 
 var casting
 var facing_direction = 1
+var frozen = false
 
 func get_player() -> Object:
 	return get_node_or_null(self.player_path)
@@ -21,8 +22,9 @@ func _ready():
 var movement = Vector2.ZERO
 
 func _physics_process(delta : float) -> void:
-	self.movement_manager(delta)
-	self.animation_manager()
+	if not self.frozen:
+		self.movement_manager(delta)
+		self.animation_manager()
 
 func movement_manager(delta : float) -> void:
 	if self.get_player() != null:
@@ -38,3 +40,20 @@ func animation_manager():
 		$AnimationPlayer.play("casting_right")
 	else:
 		$AnimationPlayer.play("casting_left")
+
+func _on_Area2D_area_entered(area):
+	print("Should work?")
+
+
+func _on_HitBox2D_area_entered(area):
+	$FreezingTimer.start()
+
+func _on_HitBox2D_area_exited(area):
+	$FreezingTimer.stop()
+
+func _on_FreezingTimer_timeout():
+	self.frozen = true
+	$UnfreezingTimer.start()
+
+func _on_UnfreezingTimer_timeout():
+	self.frozen = false
