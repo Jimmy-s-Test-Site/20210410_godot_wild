@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Julian/Maps/Map4_Sloth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Julian/Character/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/Sloth.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Julian/Levels/Level.gd" type="Script" id=4]
-
-
+[ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
 
 [node name="Level4_Sloth" type="Node2D"]
 script = ExtResource( 4 )
@@ -18,3 +17,7 @@ position = Vector2( -1724, 2289 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.876
+
+[node name="SlotMachine" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3245, 2315 )
+scale = Vector2( 4.6, 4.6 )
