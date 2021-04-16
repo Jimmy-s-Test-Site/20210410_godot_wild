@@ -22,7 +22,7 @@ func get_spawn_point() -> Object:
 
 
 func _ready():
-	$AnimationPlayer.play("casting_right")
+	$AnimationPlayer.play("idle_right")
 
 func _physics_process(delta : float) -> void:
 	if not self.frozen:
@@ -42,9 +42,9 @@ func movement_manager(delta : float) -> void:
 
 func animation_manager():
 	if self.facing_direction == 1:
-		$AnimationPlayer.play("casting_right")
+		$AnimationPlayer.play("idle_right")
 	else:
-		$AnimationPlayer.play("casting_left")
+		$AnimationPlayer.play("idle_left")
 
 
 
