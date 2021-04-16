@@ -17,7 +17,9 @@ func load_level(n : int) -> void:
 	self.level = self.levels[n].instance()
 	self.level.connect("goto_next", self, "on_level_goto_next")
 	
-	self.call_deferred("add_child", self.level)# add_child(level)
+	# this fucker right here almost killed me
+	# if you get errors about collisions or whatever, remember this line
+	self.call_deferred("add_child", self.level)
 
 func on_level_goto_next() -> void:
 	self.load_level(self.level_index + 1)
