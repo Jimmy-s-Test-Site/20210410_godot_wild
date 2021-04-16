@@ -5,6 +5,8 @@
 [ext_resource path="res://Julian/Maps/Map6_Gluttony.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Audio/Gluttony.ogg" type="AudioStream" id=4]
 
+
+
 [node name="Level6_Gluttony" type="Node2D"]
 script = ExtResource( 1 )
 
