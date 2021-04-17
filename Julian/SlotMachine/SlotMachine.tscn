@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Art/Slot Machine/Dimitra_SlotMachine.png" type="Texture" id=2]
-[ext_resource path="res://Julian/SlotMachine/Slot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Slot.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 76, 36 )
