@@ -28,6 +28,11 @@ func movement_manager(delta : float):
 	if !self.is_on_floor():
 		self.velocity.y += self.gravity * delta
 	
+	if player_character != null:
+		if  self.position.y - player_character.position.y < -10:
+			self.direction_to_move = 0
+	else:
+		self.direction_to_move = 0
 	
 	if direction_to_move > 0:
 		self.velocity.x = -movement_speed
@@ -56,9 +61,10 @@ func animation_manager():
 
 
 func find_character():
-	self.direction_to_move = self.position.x - player_character.position.x
-	if direction_to_move > aggro_range or direction_to_move < -aggro_range:
-		direction_to_move = 0
+	if player_character != null:
+		self.direction_to_move = self.position.x - player_character.position.x
+		if direction_to_move > aggro_range or direction_to_move < -aggro_range:
+			direction_to_move = 0
 
 func _ready():
 	pass # Replace with function body.

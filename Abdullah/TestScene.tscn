@@ -45,39 +45,23 @@ position = Vector2( 599.224, 172.74 )
 player_character_path = NodePath("../Character")
 
 [node name="Enemy2" parent="." instance=ExtResource( 2 )]
-position = Vector2( -61.8809, 39.2479 )
+position = Vector2( 326.917, 491.767 )
 player_character_path = NodePath("../Character")
 
 [node name="Enemy3" parent="." instance=ExtResource( 2 )]
-position = Vector2( -506.855, 395.227 )
+position = Vector2( 173.41, 390.319 )
 player_character_path = NodePath("../Character")
 
 [node name="Enemy4" parent="." instance=ExtResource( 2 )]
-position = Vector2( -566.185, 189.692 )
+position = Vector2( 1131.83, 306.224 )
 player_character_path = NodePath("../Character")
 
 [node name="Enemy5" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1359.92, 62.5561 )
+position = Vector2( 1017.03, 159.392 )
 player_character_path = NodePath("../Character")
 
 [node name="Enemy6" parent="." instance=ExtResource( 2 )]
-position = Vector2( 698.814, 513.887 )
-player_character_path = NodePath("../Character")
-
-[node name="Enemy7" parent="." instance=ExtResource( 2 )]
-position = Vector2( -182.66, 454.557 )
-player_character_path = NodePath("../Character")
-
-[node name="Enemy8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 126.703, 501.174 )
-player_character_path = NodePath("../Character")
-
-[node name="Enemy9" parent="." instance=ExtResource( 2 )]
-position = Vector2( 955.203, 369.8 )
-player_character_path = NodePath("../Character")
-
-[node name="Enemy10" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1150.14, 371.919 )
+position = Vector2( 888.884, 262.174 )
 player_character_path = NodePath("../Character")
 
 [node name="Character" parent="." instance=ExtResource( 3 )]
