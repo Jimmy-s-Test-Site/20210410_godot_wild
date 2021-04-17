@@ -15,6 +15,7 @@ export (int) var health = 1
 
 export (int) var gravity = 250
 
+onready var state_machine = $AnimationTree.get("parameters/playback")
 var velocity = Vector2.ZERO
 var is_being_lazered = false
 var is_alive = true
@@ -57,7 +58,19 @@ func attack_manager():
 		$"Attack Area/Range".disabled = false
 
 func animation_manager():
-	pass
+	if self.direction_to_move != 0:
+		if direction_to_move < 0:
+			#$AnimationTree.set('parameters/Idle/blend_position' ,-1)
+			#$AnimationTree.set('parameters/Walk/blend_position' ,-1)
+			$AnimationPlayer.play("Walking_Right")
+		else:
+			#$AnimationTree.set('parameters/Idle/blend_position' ,1)
+			#$AnimationTree.set('parameters/Walk/blend_position' ,1)
+			$AnimationPlayer.play("Walking_Left")
+		
+	else:
+		$AnimationPlayer.play("Idle")
+		#self.state_machine.travel('Idle')
 
 
 func find_character():
@@ -67,8 +80,7 @@ func find_character():
 			direction_to_move = 0
 
 func _ready():
-	pass # Replace with function body.
-
+	pass
 
 
 func _process(delta):
@@ -76,6 +88,7 @@ func _process(delta):
 	if self.is_alive:
 		self.find_character()
 		self.movement_manager(delta)
+		self.animation_manager()
 		self.attack_manager()
 		
 	
