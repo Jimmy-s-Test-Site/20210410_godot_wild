@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.gd" type="Script" id=1]
 [ext_resource path="res://Art/Slot Machine/Dimitra_SlotMachine.png" type="Texture" id=2]
-[ext_resource path="res://Slot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Julian/SlotMachine/Slot.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 76, 36 )
@@ -24,33 +24,33 @@ texture = ExtResource( 2 )
 vframes = 2
 hframes = 3
 
-[node name="Nodes" type="Node2D" parent="."]
+[node name="Slots" type="Node2D" parent="."]
 
-[node name="Slot0" parent="Nodes" instance=ExtResource( 3 )]
+[node name="Slot0" parent="Slots" instance=ExtResource( 3 )]
 position = Vector2( -58.4209, -15.8597 )
-scale = Vector2( 0.5, 0.699999 )
+scale = Vector2( 0.256, 0.699999 )
 
-[node name="Slot1" parent="Nodes" instance=ExtResource( 3 )]
+[node name="Slot1" parent="Slots" instance=ExtResource( 3 )]
 position = Vector2( -39.606, -15.86 )
-scale = Vector2( 0.5, 0.699999 )
+scale = Vector2( 0.256, 0.699999 )
 
-[node name="Slot2" parent="Nodes" instance=ExtResource( 3 )]
+[node name="Slot2" parent="Slots" instance=ExtResource( 3 )]
 position = Vector2( -20.85, -15.86 )
-scale = Vector2( 0.5, 0.699999 )
+scale = Vector2( 0.256, 0.699999 )
 
-[node name="Slot3" parent="Nodes" instance=ExtResource( 3 )]
+[node name="Slot3" parent="Slots" instance=ExtResource( 3 )]
 position = Vector2( -2.082, -15.86 )
-scale = Vector2( 0.5, 0.699999 )
+scale = Vector2( 0.256, 0.699999 )
 
-[node name="Slot4" parent="Nodes" instance=ExtResource( 3 )]
+[node name="Slot4" parent="Slots" instance=ExtResource( 3 )]
 position = Vector2( 16.029, -15.86 )
-scale = Vector2( 0.5, 0.699999 )
+scale = Vector2( 0.256, 0.699999 )
 
-[node name="Slot5" parent="Nodes" instance=ExtResource( 3 )]
+[node name="Slot5" parent="Slots" instance=ExtResource( 3 )]
 position = Vector2( 35.241, -15.86 )
-scale = Vector2( 0.5, 0.699999 )
+scale = Vector2( 0.256, 0.699999 )
 
-[node name="Slot6" parent="Nodes" instance=ExtResource( 3 )]
+[node name="Slot6" parent="Slots" instance=ExtResource( 3 )]
 position = Vector2( 53.753, -15.86 )
-scale = Vector2( 0.5, 0.699999 )
+scale = Vector2( 0.256, 0.699999 )
 [connection signal="body_entered" from="InteractionRadius" to="." method="_on_InteractionRadius_body_entered"]
