@@ -9,6 +9,9 @@ export(int) var speed = 4000
 var casting
 var facing_direction = 1
 var frozen = false
+var movement = Vector2.ZERO
+
+
 
 func get_player() -> Object:
 	return get_node_or_null(self.player_path)
@@ -16,15 +19,17 @@ func get_player() -> Object:
 func get_spawn_point() -> Object:
 	return get_node_or_null(self.spawn_points_path)
 
-func _ready():
-	$AnimationPlayer.play("casting_right")
 
-var movement = Vector2.ZERO
+
+func _ready():
+	$AnimationPlayer.play("idle_right")
 
 func _physics_process(delta : float) -> void:
 	if not self.frozen:
 		self.movement_manager(delta)
 		self.animation_manager()
+
+
 
 func movement_manager(delta : float) -> void:
 	if self.get_player() != null:
@@ -37,12 +42,10 @@ func movement_manager(delta : float) -> void:
 
 func animation_manager():
 	if self.facing_direction == 1:
-		$AnimationPlayer.play("casting_right")
+		$AnimationPlayer.play("idle_right")
 	else:
-		$AnimationPlayer.play("casting_left")
+		$AnimationPlayer.play("idle_left")
 
-func _on_Area2D_area_entered(area):
-	print("Should work?")
 
 
 func _on_HitBox2D_area_entered(area):

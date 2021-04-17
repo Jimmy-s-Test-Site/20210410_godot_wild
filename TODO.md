@@ -7,10 +7,7 @@
   - [x] ghost light attack
   - [ ] violin attack
   - [x] death
-  - [ ] attack shuffling
-  - [ ] perks on death
-  - [ ] buffs
-  - [ ] make a wish once you kill 7
+  - [ ] perks on death after killing 7
 - [ ] minions
   - [x] follow player
   - [ ] attacks

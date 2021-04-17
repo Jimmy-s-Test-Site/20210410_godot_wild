@@ -3,7 +3,7 @@ extends RayCast2D
 export var rotation_speed = deg2rad(5)
 # Speed at which the laser extends when first fired, in pixels per seconds.
 export var cast_speed := 7000.0
-export var max_length := 1400.0
+export var max_length := 200.0
 export var growth_time := 0.1
 
 # If `true`, the laser is firing.
@@ -29,20 +29,6 @@ func _unhandled_input(event : InputEvent) -> void:
 		self.is_casting = event.pressed
 
 func _physics_process(delta: float) -> void:
-	var target_rotation = (self.get_global_mouse_position() - self.global_position).angle()
-	
-	if self.snap_to_mouse_next_frame:
-		self.rotation = target_rotation
-		self.snap_to_mouse_next_frame = false
-	
-	var dir = self.get_angle_to(self.get_global_mouse_position())
-	
-	if abs(dir) < self.rotation_speed:
-		self.rotation += dir
-	else:
-		if dir > 0: self.rotation += self.rotation_speed
-		if dir < 0: self.rotation -= self.rotation_speed
-	
 	self.cast_to = (self.cast_to + Vector2.RIGHT * self.cast_speed * delta).clamped(self.max_length)
 	self.cast_beam()
 
@@ -57,7 +43,7 @@ func set_is_casting(cast: bool) -> void:
 		self.collision_particles.emitting = false
 		self.disappear()
 	
-	$CollisionParticles2D/CollisionArea2D/CollisionShape2D.disabled = not self.is_casting
+	$CollisionArea2D/CollisionShape2D.disabled = not self.is_casting
 	
 	self.set_physics_process(self.is_casting)
 	self.beam_particles.emitting = self.is_casting
