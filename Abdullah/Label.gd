@@ -10,18 +10,18 @@ var done = false
 
 func text_crawl():
 	if my_visible_characters <= limit:
-		print(my_visible_characters)
-		my_visible_characters+= .1
+		my_visible_characters+= .5
 		self.visible_characters = self.my_visible_characters
 	else:
 		if (self.waiting == false) and (self.done == false):
-			$Timer.start(10)
+			print("hey")
+			$Timer.start(3)
 			self.waiting = true
 
 
 func _ready():
-	$Timer.start(.1)
-	self.waiting = true
+	pass
+
 
 func _process(delta):
 	self.text_crawl()
@@ -30,8 +30,8 @@ func _process(delta):
 
 func _on_Timer_timeout():
 	waiting = false
-	
 	print("bruh")
+	
 	
 	if my_phrase == 1:
 		self.my_visible_characters = 0
@@ -48,3 +48,4 @@ func _on_Timer_timeout():
 		self.done = true
 	
 	self.my_phrase += 1
+	$Timer.stop()
