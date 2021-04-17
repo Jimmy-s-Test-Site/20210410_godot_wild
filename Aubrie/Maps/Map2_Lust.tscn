@@ -1,9 +1,9 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Art/x marks trap.png" type="Texture" id=1]
-[ext_resource path="res://Art/white box.JPG" type="Texture" id=3]
-[ext_resource path="res://Art/icon.png" type="Texture" id=5]
-[ext_resource path="res://Art/Atlas's of each map/Level Two molten map.png" type="Texture" id=6]
+[ext_resource path="res://Art/white box.JPG" type="Texture" id=2]
+[ext_resource path="res://Art/icon.png" type="Texture" id=3]
+[ext_resource path="res://Art/Atlas's of each map/Level Two molten map.png" type="Texture" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 105, 0, 105, 98, 0, 98 )
@@ -37,7 +37,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [sub_resource type="TileSet" id=11]
 0/name = "white box.JPG 0"
-0/texture = ExtResource( 3 )
+0/texture = ExtResource( 2 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 2, 2, 105, 98 )
@@ -58,7 +58,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 } ]
 0/z_index = 0
 1/name = "molten map.png 1"
-1/texture = ExtResource( 6 )
+1/texture = ExtResource( 4 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 62, 63, 703, 323 )
@@ -146,7 +146,7 @@ tile_data = PoolIntArray( -786420, 1, 0, -786419, 1, 2, -786406, 1, 0, -786405, 
 [node name="icon" type="Sprite" parent="TileMap"]
 position = Vector2( 1263.17, 838.979 )
 scale = Vector2( 2.35203, 2.88809 )
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 
 [node name="x marks trap" type="Sprite" parent="TileMap"]
 position = Vector2( -161.304, 1183.31 )

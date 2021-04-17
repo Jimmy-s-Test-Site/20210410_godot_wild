@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Julian/Maps/Map5_Envy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Aubrie/Maps/Map5_Envy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Julian/Character/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/Envy.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Julian/Levels/Level.gd" type="Script" id=4]
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
+
 
 [node name="Level5_Envy" type="Node2D"]
 script = ExtResource( 4 )

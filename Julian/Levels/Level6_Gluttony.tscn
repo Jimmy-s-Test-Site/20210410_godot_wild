@@ -2,9 +2,10 @@
 
 [ext_resource path="res://Julian/Levels/Level.gd" type="Script" id=1]
 [ext_resource path="res://Julian/Character/Character.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Julian/Maps/Map6_Gluttony.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Aubrie/Maps/Map6_Gluttony.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Audio/Gluttony.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
+
 
 [node name="Level6_Gluttony" type="Node2D"]
 script = ExtResource( 1 )
