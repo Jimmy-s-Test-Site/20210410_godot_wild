@@ -19,6 +19,7 @@ func load_level(n : int) -> void:
 	
 	# this fucker right here almost killed me
 	# if you get errors about collisions or whatever, remember this line
+	# since the level is getting freed, I can't add the new level until I'm sure the world is clear
 	self.call_deferred("add_child", self.level)
 
 func on_level_goto_next() -> void:
