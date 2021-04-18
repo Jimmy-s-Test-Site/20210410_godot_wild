@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Aubrie/Maps/Map4_Sloth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Julian/Character/Character.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Julian/Fairy/Fairy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Julian/Fairy/FireRing.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Abdullah/Enemies[7]/Minion_Sloth.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Abdullah/Enemies[7]/Minion_Lust.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Abdullah/Enemies[7]/Minion_Wrath.tscn" type="PackedScene" id=10]
 
 [node name="Level4_Sloth" type="Node2D"]
 script = ExtResource( 4 )
@@ -57,5 +60,122 @@ position = Vector2( 2751, 3066 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.876
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2992.78, 2857.32 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2120.85, 2677.21 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 1541.31, 2611.14 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 834.105, 2790.94 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 1244.64, 3126.56 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 579.393, 3168.51 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 347.393, 3756.51 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 99.3932, 3832.51 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy10" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -740.607, 4480.51 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy12" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -1276.61, 3636.51 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy24" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -1513.59, 3572.37 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy25" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -1846.78, 3098.41 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy26" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -1900.24, 3513.57 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy13" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -1397.83, 3160.59 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy14" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -2046.62, 3542.23 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy15" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -1504.17, 4099.5 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy16" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -1930.07, 3175.65 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy11" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( -924.607, 4156.51 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 2428.34, 2897.64 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy17" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( -1979.96, 4038.03 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy18" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( -1602.81, 2713.52 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy19" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( -1221.84, 2370.64 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy20" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( -428.136, 2808.77 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy21" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( -63.0338, 3167.52 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy22" parent="Enemies" instance=ExtResource( 9 )]
+position = Vector2( -390.038, 3431.03 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy23" parent="Enemies" instance=ExtResource( 10 )]
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy27" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( -1318.91, 4090.32 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy28" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( -2598.51, 3639.09 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy29" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( -903.596, 3450.52 )
+player_character_path = NodePath("../../Character")
 [connection signal="teleport" from="SlotMachine" to="." method="_on_SlotMachine_teleport"]
 [connection signal="die" from="Character" to="." method="_on_Character_die"]
