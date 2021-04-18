@@ -5,6 +5,7 @@ export(Array, PackedScene) var levels
 
 var level_index = -1
 var level = null
+var muted = false
 
 func _ready():
 	self.load_level(self.start_at % self.levels.size())
@@ -30,3 +31,8 @@ func on_level_goto_next() -> void:
 
 func on_level_repeat() -> void:
 	self.load_level(self.level_index);
+	
+func _process(delta):
+	if Input.is_action_just_pressed("Mute"):
+		self.muted = !self.muted
+		AudioServer.set_bus_mute(AudioServer.get_bus_index("Master"), self.muted)
