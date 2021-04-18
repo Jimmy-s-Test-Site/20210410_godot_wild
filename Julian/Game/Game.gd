@@ -1,12 +1,13 @@
 extends Node2D
 
+export(int) var start_at = 0
 export(Array, PackedScene) var levels
 
 var level_index = -1
 var level = null
 
 func _ready():
-	self.load_level(0)
+	self.load_level(self.start_at % self.levels.size())
 
 func load_level(n : int) -> void:
 	if self.level != null:
