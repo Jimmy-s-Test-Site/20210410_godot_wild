@@ -4,6 +4,7 @@ signal Fire_Pillar
 
 export(NodePath) var player_path
 export(NodePath) var spawn_points_path
+export(NodePath) var fire_rings_path
 export(int) var speed = 4000
 
 var casting
@@ -19,6 +20,8 @@ func get_player() -> Object:
 func get_spawn_point() -> Object:
 	return get_node_or_null(self.spawn_points_path)
 
+func get_fire_rings() -> Object:
+	return get_node_or_null(self.fire_rings_path)
 
 
 func _ready():
@@ -66,3 +69,28 @@ func _on_FreezingTimer_timeout():
 
 func _on_UnfreezingTimer_timeout():
 	self.frozen = false
+
+func _on_SpawnTimer_timeout():
+	
+	
+	$SpawnTimer.start()
+
+func _on_FireTimer_timeout():
+	if self.get_fire_rings() != null:
+		var closest_spawn_point
+		var smallest_distance = -1
+		
+		for spawn_point in self.get_fire_rings().get_children():
+			spawn_point.enabled = false
+			
+			var distance = spawn_point.position.distance_to(self.position)
+			
+			if smallest_distance == -1 or distance < smallest_distance:
+				closest_spawn_point = spawn_point
+				smallest_distance = distance
+		
+		if closest_spawn_point.enabled == false:
+			closest_spawn_point.enabled = true
+			closest_spawn_point.get_node("AppearTimer").start()
+	
+	$FireTimer.start()

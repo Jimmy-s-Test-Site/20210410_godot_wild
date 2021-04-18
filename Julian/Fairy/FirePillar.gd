@@ -25,8 +25,9 @@ func _ready() -> void:
 	fill.points[1] = Vector2.ZERO
 
 func _unhandled_input(event : InputEvent) -> void:
-	if event is InputEventMouseButton:
-		self.is_casting = event.pressed
+	pass
+	#if event is InputEventMouseButton:
+	#	self.is_casting = event.pressed
 
 func _physics_process(delta: float) -> void:
 	self.cast_to = (self.cast_to + Vector2.RIGHT * self.cast_speed * delta).clamped(self.max_length)

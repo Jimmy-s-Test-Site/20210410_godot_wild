@@ -414,7 +414,6 @@ shape = SubResource( 1 )
 [node name="Sprites" type="Node2D" parent="."]
 
 [node name="Casting" type="Sprite" parent="Sprites"]
-visible = false
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 flip_h = true
@@ -428,6 +427,7 @@ texture = ExtResource( 3 )
 hframes = 4
 
 [node name="Summoning" type="Sprite" parent="Sprites"]
+visible = false
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
 flip_h = true
@@ -449,6 +449,13 @@ wait_time = 0.4
 [node name="UnfreezingTimer" type="Timer" parent="."]
 wait_time = 3.0
 
+[node name="SpawnTimer" type="Timer" parent="."]
+autostart = true
+
+[node name="FireTimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [node name="HitBox2D" type="Area2D" parent="."]
 collision_layer = 2
 collision_mask = 2
@@ -457,5 +464,7 @@ collision_mask = 2
 shape = SubResource( 9 )
 [connection signal="timeout" from="FreezingTimer" to="." method="_on_FreezingTimer_timeout"]
 [connection signal="timeout" from="UnfreezingTimer" to="." method="_on_UnfreezingTimer_timeout"]
+[connection signal="timeout" from="SpawnTimer" to="." method="_on_SpawnTimer_timeout"]
+[connection signal="timeout" from="FireTimer" to="." method="_on_FireTimer_timeout"]
 [connection signal="area_entered" from="HitBox2D" to="." method="_on_HitBox2D_area_entered"]
 [connection signal="area_exited" from="HitBox2D" to="." method="_on_HitBox2D_area_exited"]

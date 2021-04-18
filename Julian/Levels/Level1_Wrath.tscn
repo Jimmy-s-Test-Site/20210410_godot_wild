@@ -24,6 +24,7 @@ position = Vector2( 1385, 2416 )
 [node name="Fairy" parent="." instance=ExtResource( 7 )]
 position = Vector2( 383, 1475 )
 player_path = NodePath("../Character")
+fire_rings_path = NodePath("../FireRings")
 speed = 8000
 
 [node name="SpawnPoints" type="Node2D" parent="."]
