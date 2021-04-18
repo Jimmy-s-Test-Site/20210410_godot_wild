@@ -6,19 +6,19 @@
 [ext_resource path="res://Julian/Levels/Level.gd" type="Script" id=4]
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
 
-
 [node name="Level7_Pride" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="Map7_Pride" parent="." instance=ExtResource( 1 )]
 
-[node name="Character" parent="." instance=ExtResource( 2 )]
-position = Vector2( -521, -536 )
-
 [node name="SlotMachine" parent="." instance=ExtResource( 5 )]
 position = Vector2( -3440, -4150 )
 scale = Vector2( 4.6, 4.6 )
 
+[node name="Character" parent="." instance=ExtResource( 2 )]
+position = Vector2( -521, -536 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.876
+[connection signal="teleport" from="SlotMachine" to="." method="_on_SlotMachine_teleport"]

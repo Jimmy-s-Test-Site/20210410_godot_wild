@@ -6,7 +6,6 @@
 [ext_resource path="res://Julian/Levels/Level.gd" type="Script" id=4]
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
 
-
 [node name="Level2_Lust" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -22,3 +21,4 @@ position = Vector2( 411, 311 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -10.876
+[connection signal="teleport" from="SlotMachine" to="." method="_on_SlotMachine_teleport"]

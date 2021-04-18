@@ -6,19 +6,19 @@
 [ext_resource path="res://Audio/Gluttony.ogg" type="AudioStream" id=4]
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
 
-
 [node name="Level6_Gluttony" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Map6_Gluttony" parent="." instance=ExtResource( 3 )]
 
-[node name="Character" parent="." instance=ExtResource( 2 )]
-position = Vector2( -2430, 2466 )
-
 [node name="SlotMachine" parent="." instance=ExtResource( 5 )]
 position = Vector2( -8192, 4816 )
 scale = Vector2( 4.6, 4.6 )
 
+[node name="Character" parent="." instance=ExtResource( 2 )]
+position = Vector2( -2430, 2466 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 volume_db = -10.876
+[connection signal="teleport" from="SlotMachine" to="." method="_on_SlotMachine_teleport"]
