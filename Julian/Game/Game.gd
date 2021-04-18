@@ -23,4 +23,4 @@ func load_level(n : int) -> void:
 	self.call_deferred("add_child", self.level)
 
 func on_level_goto_next() -> void:
-	self.load_level(self.level_index + 1)
+	self.load_level((self.level_index + 1) % self.level.size())
