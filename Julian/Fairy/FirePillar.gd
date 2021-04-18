@@ -3,7 +3,7 @@ extends RayCast2D
 export var rotation_speed = deg2rad(5)
 # Speed at which the laser extends when first fired, in pixels per seconds.
 export var cast_speed := 7000.0
-export var max_length := 200.0
+export var max_length := 2000.0
 export var growth_time := 0.1
 
 # If `true`, the laser is firing.
@@ -23,11 +23,6 @@ var snap_to_mouse_next_frame = false
 func _ready() -> void:
 	self.set_physics_process(false)
 	fill.points[1] = Vector2.ZERO
-
-func _unhandled_input(event : InputEvent) -> void:
-	pass
-	#if event is InputEventMouseButton:
-	#	self.is_casting = event.pressed
 
 func _physics_process(delta: float) -> void:
 	self.cast_to = (self.cast_to + Vector2.RIGHT * self.cast_speed * delta).clamped(self.max_length)

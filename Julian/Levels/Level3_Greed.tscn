@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Aubrie/Maps/Map3_Greed.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Julian/Character/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/Greed.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Julian/Levels/Level.gd" type="Script" id=4]
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Julian/Fairy/Fairy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Julian/Fairy/FireRing.tscn" type="PackedScene" id=7]
 
 [node name="Level3_Greed" type="Node2D"]
 script = ExtResource( 4 )
@@ -17,6 +19,37 @@ scale = Vector2( 4.6, 4.6 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
 position = Vector2( 343, 180 )
+
+[node name="Fairy" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4220, 1967 )
+player_path = NodePath("../Character")
+fire_rings_path = NodePath("../FireRings")
+
+[node name="FireRings" type="Node2D" parent="."]
+
+[node name="FireRing" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 1576, 1529 )
+
+[node name="FireRing2" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 2321, 953 )
+
+[node name="FireRing3" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 3770, 1208 )
+
+[node name="FireRing4" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 5421, 1400 )
+
+[node name="FireRing5" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 6356, 2040 )
+
+[node name="FireRing6" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 3621, 2808 )
+
+[node name="FireRing7" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 2319, 3444 )
+
+[node name="FireRing8" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 2850, 4024 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

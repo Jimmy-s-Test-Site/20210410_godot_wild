@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Aubrie/Maps/Map4_Sloth.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Julian/Character/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Audio/Sloth.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Julian/Levels/Level.gd" type="Script" id=4]
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Julian/Fairy/Fairy.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Julian/Fairy/FireRing.tscn" type="PackedScene" id=7]
 
 [node name="Level4_Sloth" type="Node2D"]
 script = ExtResource( 4 )
@@ -17,6 +19,40 @@ scale = Vector2( 4.6, 4.6 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1724, 2289 )
+
+[node name="Fairy" parent="." instance=ExtResource( 6 )]
+position = Vector2( -2631, 4111 )
+player_path = NodePath("../Character")
+fire_rings_path = NodePath("../FireRings")
+
+[node name="FireRings" type="Node2D" parent="."]
+
+[node name="FireRing" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( -1768, 3640 )
+
+[node name="FireRing2" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( -1795, 4155 )
+
+[node name="FireRing3" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( -243, 4154 )
+
+[node name="FireRing4" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( -631, 3451 )
+
+[node name="FireRing5" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( -561, 2873 )
+
+[node name="FireRing6" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 318, 3321 )
+
+[node name="FireRing7" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 1437, 3259 )
+
+[node name="FireRing8" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 1885, 2555 )
+
+[node name="FireRing9" parent="FireRings" instance=ExtResource( 7 )]
+position = Vector2( 2751, 3066 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
