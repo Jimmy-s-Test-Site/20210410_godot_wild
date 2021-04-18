@@ -1,5 +1,7 @@
 extends Label
 
+signal goto_next
+
 var my_visible_characters = 0.1
 var limit = 0
 
@@ -35,26 +37,28 @@ func _on_Timer_timeout():
 	
 	if my_phrase == 1:
 		self.my_visible_characters = 0
-		self.limit = 40
+		self.limit = 223
 		self.set_text(
-			"Epic Sauce Dude! You Did it"
+			"You’ve done it! Against all odds, you were able to purify your soul. \nPaimon has never met such an immaculate heart in such a deep circle of hell. \nIt must have been a mistake! The Faerie Queen would never have allowed this."
 		)
 	
 	
 	if my_phrase == 2:
 		self.my_visible_characters = 0
-		self.limit = 100
+		self.limit = 114
 		$ColorRect2.visible = true
 		self.set_text(
-			"The door to heaven is open now. Be free yah hussy"
+			"The door of Hell is open now. You are sent back to the surface world, where you’re free from the banes of hell"
 		)
 	
 	if my_phrase == 3:
 		self.my_visible_characters = 0
-		self.limit = 6
+		self.limit = 64
 		self.set_text(
-			"Peace"
+			"You just gotta pray you don’t get picked again in seven years."
 		)
+		$Button.visible = true
+		$Button2.visible = true
 	
 	if my_phrase == self.max_phrases:
 		self.done = true

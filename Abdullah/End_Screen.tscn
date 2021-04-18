@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Art/main player.png" type="Texture" id=1]
 [ext_resource path="res://Abdullah/Label_End.gd" type="Script" id=2]
+[ext_resource path="res://Abdullah/End_Screen.gd" type="Script" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -50,7 +52,28 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button" type="Button" parent="Panel/Label"]
+visible = false
+margin_left = 310.842
+margin_top = 341.14
+margin_right = 484.842
+margin_bottom = 381.14
+text = "Escape Hell!"
+
+[node name="Button2" type="Button" parent="Panel/Label"]
+visible = false
+margin_left = -26.6789
+margin_top = 336.306
+margin_right = 65.3211
+margin_bottom = 379.306
+text = "<--Restart?"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="main player" type="Sprite" parent="."]
-position = Vector2( 325.543, 460.587 )
+position = Vector2( 365.86, 459.328 )
 texture = ExtResource( 1 )
 [connection signal="timeout" from="Panel/Label/Timer" to="Panel/Label" method="_on_Timer_timeout"]
+[connection signal="pressed" from="Panel/Label/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Panel/Label/Button2" to="." method="_on_Button2_pressed"]
