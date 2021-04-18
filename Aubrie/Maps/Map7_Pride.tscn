@@ -1,10 +1,311 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Aubrie/Maps/Brighter Green map.tres" type="TileSet" id=3]
 [ext_resource path="res://Art/O marks Jackpot.png" type="Texture" id=4]
 [ext_resource path="res://Art/Backgrounds/green grass.png" type="Texture" id=5]
+[ext_resource path="res://Art/Backgrounds/flowers.png" type="Texture" id=6]
+[ext_resource path="res://Art/Backgrounds/sunlight.png" type="Texture" id=7]
+[ext_resource path="res://Art/Backgrounds/blue sky.png" type="Texture" id=8]
+[ext_resource path="res://Art/Backgrounds/green tree.png" type="Texture" id=9]
+[ext_resource path="res://Art/Backgrounds/dark green tree.png" type="Texture" id=10]
 
 [node name="Map7_Pride" type="Node2D"]
+
+[node name="blue sky" type="Sprite" parent="."]
+position = Vector2( -541.65, -2661.95 )
+scale = Vector2( 3.50989, 2.72041 )
+texture = ExtResource( 8 )
+
+[node name="green tree" type="Sprite" parent="."]
+position = Vector2( -2573.3, -2802.63 )
+scale = Vector2( 0.233753, 0.214696 )
+texture = ExtResource( 9 )
+
+[node name="dark green tree2" type="Sprite" parent="."]
+position = Vector2( -592.554, -2237.36 )
+scale = Vector2( 0.248586, 0.254232 )
+texture = ExtResource( 10 )
+
+[node name="green tree" type="Sprite" parent="dark green tree2"]
+position = Vector2( 7975.14, 779.181 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree"]
+position = Vector2( 3073.94, 4078.26 )
+texture = ExtResource( 10 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree"]
+position = Vector2( 1037.03, -71.822 )
+scale = Vector2( 0.937816, 0.990227 )
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree"]
+position = Vector2( 4334.52, -3543.21 )
+scale = Vector2( 1.34064, 1.15701 )
+texture = ExtResource( 9 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/green tree"]
+position = Vector2( -2805.13, -188.84 )
+scale = Vector2( 1.28826, 1.39387 )
+texture = ExtResource( 10 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree"]
+position = Vector2( -4778.36, -3796.66 )
+scale = Vector2( 0.835596, 0.820622 )
+texture = ExtResource( 10 )
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree"]
+position = Vector2( -2292.95, 1929.08 )
+scale = Vector2( 1.26579, 1.1875 )
+texture = ExtResource( 9 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree"]
+position = Vector2( -5191.55, 3112.3 )
+scale = Vector2( 1.14764, 1.20911 )
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( -3971.34, -1043.32 )
+scale = Vector2( 0.551164, 0.601169 )
+texture = ExtResource( 9 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree"]
+position = Vector2( 387.706, -267.228 )
+scale = Vector2( 1.19192, 1.18787 )
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( -4173.75, 246.608 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 10 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree"]
+position = Vector2( -3540.81, -627.135 )
+scale = Vector2( 1.37557, 1.33938 )
+texture = ExtResource( 10 )
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree"]
+position = Vector2( -2183.45, -1351.54 )
+scale = Vector2( 1.3089, 1.1604 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree/green tree"]
+position = Vector2( -2695.82, -2331.81 )
+scale = Vector2( 1.09136, 1.15425 )
+texture = ExtResource( 10 )
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( 317.674, 511.172 )
+scale = Vector2( 0.617731, 0.628586 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree"]
+position = Vector2( -1818.54, -6723.94 )
+texture = ExtResource( 10 )
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( 2425.56, 1061.93 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/green tree"]
+position = Vector2( -343.706, 444.574 )
+scale = Vector2( 0.587163, 0.526318 )
+texture = ExtResource( 10 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( 4802.15, -6674.49 )
+scale = Vector2( 1.40342, 1.66025 )
+texture = ExtResource( 10 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree"]
+position = Vector2( 2440.22, 3400 )
+scale = Vector2( 1.28682, 0.962424 )
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( 5791.1, -6814.8 )
+scale = Vector2( 1.8126, 1.86069 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree/dark green tree/dark green tree/green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( -3571.28, 161.631 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/dark green tree"]
+position = Vector2( 347.393, 194.484 )
+scale = Vector2( 0.879453, 0.791995 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree"]
+position = Vector2( -1005.36, -4200.08 )
+scale = Vector2( 1.2893, 1.28109 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/green tree"]
+position = Vector2( 955.803, 1068.31 )
+scale = Vector2( 0.653408, 0.691289 )
+texture = ExtResource( 10 )
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/green tree/dark green tree"]
+position = Vector2( 1183.23, -4973.83 )
+scale = Vector2( 1.26062, 1.28787 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/green tree/dark green tree/green tree"]
+position = Vector2( -5168.32, -151.655 )
+scale = Vector2( 0.600587, 0.577978 )
+texture = ExtResource( 10 )
+
+[node name="green tree" type="Sprite" parent="dark green tree2/green tree/green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( 3657.42, -794.689 )
+texture = ExtResource( 9 )
+
+[node name="dark green tree" type="Sprite" parent="dark green tree2/green tree/green tree/dark green tree/green tree/dark green tree/green tree"]
+position = Vector2( 370.433, 322.577 )
+scale = Vector2( 0.765291, 0.697024 )
+texture = ExtResource( 10 )
+flip_h = true
+
+[node name="green tree2" type="Sprite" parent="dark green tree2/green tree/green tree/dark green tree/green tree/dark green tree"]
+position = Vector2( -3315.22, 2152.31 )
+scale = Vector2( 1.10929, 1.12987 )
+texture = ExtResource( 9 )
+
+[node name="dark green tree" type="Sprite" parent="."]
+position = Vector2( -2353.58, -2755.97 )
+scale = Vector2( 0.168485, 0.173333 )
+texture = ExtResource( 10 )
+
+[node name="green tree" type="Sprite" parent="dark green tree"]
+position = Vector2( 5192.33, -456.934 )
+texture = ExtResource( 9 )
+flip_h = true
+
+[node name="dark green tree" type="Sprite" parent="dark green tree/green tree"]
+position = Vector2( 2466.84, -725.13 )
+scale = Vector2( 1.32365, 1.52509 )
+texture = ExtResource( 10 )
+
+[node name="flowers" type="Sprite" parent="."]
+position = Vector2( -2514.13, -2628.54 )
+scale = Vector2( 0.0844804, 0.0670096 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers"]
+position = Vector2( 11642.3, -1009.39 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers"]
+position = Vector2( 9086.96, -7213.52 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers"]
+position = Vector2( 3278.99, 6519.32 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers"]
+position = Vector2( -1396.16, 11322.3 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( 6983.86, 5836.63 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( 8869.7, 3821.69 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( -11985.3, 12387.3 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( -16019.3, -6708.29 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( -10867.3, -1135.8 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( -9881.86, -10506.1 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( -9387.55, -11477.7 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( -7192.94, -16283.9 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( 14470.8, -7489.16 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( -2421.17, 6566.32 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( 4814.25, 10825.6 )
+texture = ExtResource( 6 )
+
+[node name="flowers2" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( 4110.85, 1491.81 )
+texture = ExtResource( 6 )
+
+[node name="flowers2" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( 9035.88, -2545.25 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers2" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers"]
+position = Vector2( 22680.6, -3059.92 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers2"]
+position = Vector2( -6313.85, 11358.7 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers/flowers/flowers/flowers/flowers2/flowers"]
+position = Vector2( -8867.78, -15428.1 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers2" type="Sprite" parent="flowers/flowers/flowers"]
+position = Vector2( 12749.5, -8652.15 )
+texture = ExtResource( 6 )
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers2"]
+position = Vector2( 16565, 2638.39 )
+texture = ExtResource( 6 )
+flip_h = true
+
+[node name="flowers" type="Sprite" parent="flowers/flowers/flowers/flowers2/flowers"]
+position = Vector2( -8513.07, 10285.4 )
+texture = ExtResource( 6 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
@@ -328,7 +629,7 @@ scale = Vector2( 0.108924, 0.111154 )
 texture = ExtResource( 5 )
 
 [node name="green grass63" type="Sprite" parent="."]
-position = Vector2( -565.157, -1940.93 )
+position = Vector2( -557.148, -1935.59 )
 scale = Vector2( 0.108924, 0.111154 )
 texture = ExtResource( 5 )
 
@@ -348,7 +649,7 @@ scale = Vector2( 0.132054, 0.111154 )
 texture = ExtResource( 5 )
 
 [node name="green grass67" type="Sprite" parent="."]
-position = Vector2( -1525.43, -916.045 )
+position = Vector2( -1521.19, -909.688 )
 scale = Vector2( 0.125251, 0.111154 )
 texture = ExtResource( 5 )
 
@@ -373,8 +674,8 @@ scale = Vector2( 0.208926, 0.111154 )
 texture = ExtResource( 5 )
 
 [node name="green grass72" type="Sprite" parent="."]
-position = Vector2( -2933, -911.555 )
-scale = Vector2( 0.0613049, 0.111154 )
+position = Vector2( -2936.36, -911.555 )
+scale = Vector2( 0.0714976, 0.111154 )
 texture = ExtResource( 5 )
 
 [node name="green grass73" type="Sprite" parent="."]
@@ -406,3 +707,35 @@ texture = ExtResource( 5 )
 position = Vector2( 130.55, -1105.03 )
 scale = Vector2( 0.149272, 0.111154 )
 texture = ExtResource( 5 )
+
+[node name="sunlight" type="Sprite" parent="."]
+position = Vector2( -3468.64, -3501.21 )
+scale = Vector2( 1.59493, 1.10376 )
+texture = ExtResource( 7 )
+
+[node name="sunlight2" type="Sprite" parent="."]
+position = Vector2( 1379.04, -3328.38 )
+rotation = 0.525409
+texture = ExtResource( 7 )
+
+[node name="sunlight3" type="Sprite" parent="."]
+position = Vector2( 9.93835, -3275.51 )
+scale = Vector2( 0.962549, 0.828975 )
+texture = ExtResource( 7 )
+
+[node name="sunlight4" type="Sprite" parent="."]
+position = Vector2( 2374.25, -1447.52 )
+rotation = 0.690967
+scale = Vector2( 1.20836, 1.16087 )
+texture = ExtResource( 7 )
+
+[node name="sunlight5" type="Sprite" parent="."]
+position = Vector2( -1047.32, -1895.02 )
+scale = Vector2( 1.69195, 1.31259 )
+texture = ExtResource( 7 )
+
+[node name="sunlight" type="Sprite" parent="sunlight5"]
+position = Vector2( -1762.57, -95.7595 )
+rotation = -0.58828
+scale = Vector2( 0.453923, 1.02827 )
+texture = ExtResource( 7 )
