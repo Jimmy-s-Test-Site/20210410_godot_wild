@@ -26,8 +26,9 @@ Get to the Slot Machine on every level to reach the surface. Don't get beaten by
 ## Credits
 
 - Music by Geo Sunsetmoth
-- Art by Jay (MistahJay#4610)
-- Programming by Julian (jaackotorus#8796) and Abdullah Salem (Fenguin#1921)
+- Art by Jay (MistahJay)
+- Level Design by Aubrie (SimSivi)
+- Programming by Julian (jaackotorus) and Abdullah Salem (Fenguin)
 
 ## Source
 
