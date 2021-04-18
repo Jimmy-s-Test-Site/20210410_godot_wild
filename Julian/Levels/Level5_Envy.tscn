@@ -151,6 +151,14 @@ player_character_path = NodePath("../../Character")
 position = Vector2( -2378, 2055 )
 player_character_path = NodePath("../../Character")
 
+[node name="Enemy53" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( -1474, 3275 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy54" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( -1314, 3179 )
+player_character_path = NodePath("../../Character")
+
 [node name="Enemy24" parent="Enemies" instance=ExtResource( 12 )]
 position = Vector2( -1067, 1545 )
 player_character_path = NodePath("../../Character")
