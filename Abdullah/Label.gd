@@ -8,7 +8,7 @@ var limit = 0
 export (float) var speed = .3
 export (int) var time_between = 1
 var my_phrase = 1
-var max_phrases = 3
+var max_phrases = 4
 var waiting = false
 var done = false
 
@@ -52,10 +52,17 @@ func _on_Timer_timeout():
 	
 	if my_phrase == 3:
 		self.my_visible_characters = 0
-		self.limit = 355
+		self.limit = 400
 		self.set_text(
-			"To escape eternal punishments at the hands of the crowned king, one must be able to resist the temptations\n of sin as they progress through hell. Paimon would have no choice but to send the tormented\n soul back through to the surface realm, freeing you from the grips of hell. Of course, the Queen Faerie\n isn’t gonna make things easy for you. Good luck!"
+			"To escape eternal punishments at the hands of the crowned king, one must be able to resist the temptations\n of sin as they progress through hell. Paimon would have no choice but to send the tormented\n soul back through to the surface realm, freeing you from the grips of hell. Of course, the Queen Faerie\n isn’t gonna make things easy for you. Good luck!\n Tip: The Fairy Can be frozen in place with your lazer"
 		)
+	
+	if my_phrase == 4:
+		self.my_visible_characters = 0
+		self.limit = 45
+		self.set_text(
+			"Controls:\n Movement: WASD\n Lazer: Mouse"
+			)
 	
 	if my_phrase == self.max_phrases:
 		$Button.visible = true
