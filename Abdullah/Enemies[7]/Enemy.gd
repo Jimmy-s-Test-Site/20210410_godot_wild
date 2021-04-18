@@ -102,7 +102,7 @@ func _on_Attack_Area_body_entered(body):
 
 
 func _on_HitBox_area_entered(area):
-	if area.name == "CollisionArea2D":
+	if area.get_parent().name == "CollisionParticles2D":
 		var damage = 1
 		self.health -= damage
 		self.is_being_lazered = true
@@ -110,7 +110,7 @@ func _on_HitBox_area_entered(area):
 
 
 func _on_HitBox_area_exited(area):
-	if area.name == "CollisionArea2D":
+	if area.get_parent().name == "CollisionParticles2D":
 		self.is_being_lazered = false
 		$Timer.stop()
 	
