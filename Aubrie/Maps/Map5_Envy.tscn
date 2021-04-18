@@ -459,7 +459,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 [node name="Map5_Envy" type="Node2D"]
 
 [node name="blue sky" type="Sprite" parent="."]
-position = Vector2( 664.772, 1470.28 )
+position = Vector2( 664.772, 1467.62 )
 scale = Vector2( 2.5456, 1.83106 )
 texture = ExtResource( 6 )
 
@@ -572,8 +572,18 @@ scale = Vector2( 0.112502, 0.0833705 )
 texture = ExtResource( 4 )
 
 [node name="green grass11" type="Sprite" parent="."]
-position = Vector2( 153.432, 2345.64 )
+position = Vector2( 150.763, 2345.64 )
 scale = Vector2( 0.16485, 0.129813 )
+texture = ExtResource( 4 )
+
+[node name="green grass58" type="Sprite" parent="."]
+position = Vector2( -162.925, 2270.89 )
+scale = Vector2( 0.0879952, 0.129813 )
+texture = ExtResource( 4 )
+
+[node name="green grass59" type="Sprite" parent="."]
+position = Vector2( 405.717, 2276.22 )
+scale = Vector2( 0.0621074, 0.129813 )
 texture = ExtResource( 4 )
 
 [node name="green grass12" type="Sprite" parent="."]
