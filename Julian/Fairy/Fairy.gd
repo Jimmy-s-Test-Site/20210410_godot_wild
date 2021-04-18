@@ -38,7 +38,7 @@ func movement_manager(delta : float) -> void:
 	if self.get_player() != null:
 		var direction_to_player = self.get_player().position - self.position
 		
-		if direction_to_player.length() < 74:
+		if direction_to_player.length() < 102:
 			return
 		
 		var direction_to_move = direction_to_player.normalized()
