@@ -1,5 +1,7 @@
 extends Label
 
+signal goto_next
+
 var my_visible_characters = 0.1
 var limit = 0
 
@@ -56,7 +58,12 @@ func _on_Timer_timeout():
 		)
 	
 	if my_phrase == self.max_phrases:
+		$Button.visible = true
 		self.done = true
 	
 	self.my_phrase += 1
 	$Timer.stop()
+
+
+func _on_Button_pressed():
+	emit_signal("goto_next")

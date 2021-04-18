@@ -41,8 +41,17 @@ speed = 1.0
 
 [node name="Timer" type="Timer" parent="Panel/Label"]
 
+[node name="Button" type="Button" parent="Panel/Label"]
+visible = false
+margin_left = 37.8894
+margin_top = 227.999
+margin_right = 221.889
+margin_bottom = 272.999
+text = "START"
+
 [node name="big volcano" type="Sprite" parent="."]
 position = Vector2( 747.023, 412.116 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
 [connection signal="timeout" from="Panel/Label/Timer" to="Panel/Label" method="_on_Timer_timeout"]
+[connection signal="pressed" from="Panel/Label/Button" to="Panel/Label" method="_on_Button_pressed"]
