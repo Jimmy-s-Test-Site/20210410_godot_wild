@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+signal die
+
 export(int) var run_speed = 350
 export(int) var jump_speed = -1000
 export(int) var gravity = 2500
@@ -64,5 +66,8 @@ func animation_manager():
 
 func _on_Hitbox_body_entered(body):
 	if body.name.begins_with("Enemy"):
-		# die when touched
-		self.queue_free()
+		self.emit_signal("die")
+
+func _on_Hitbox_area_entered(area):
+	if area.name.begins_with("HitBox"):
+		self.emit_signal("die")

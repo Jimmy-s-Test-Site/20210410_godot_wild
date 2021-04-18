@@ -22,3 +22,4 @@ position = Vector2( -521, -536 )
 stream = ExtResource( 3 )
 volume_db = -10.876
 [connection signal="teleport" from="SlotMachine" to="." method="_on_SlotMachine_teleport"]
+[connection signal="die" from="Character" to="." method="_on_Character_die"]

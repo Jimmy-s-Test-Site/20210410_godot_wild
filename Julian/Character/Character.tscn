@@ -9,7 +9,7 @@ radius = 17.2857
 height = 30.2857
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 25, 28 )
+extents = Vector2( 25, 32.8571 )
 
 [sub_resource type="StreamTexture" id=3]
 flags = 4
@@ -115,10 +115,10 @@ position = Vector2( 7.14286, 4.28571 )
 shape = SubResource( 1 )
 
 [node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
-visible = false
-position = Vector2( 6, -2 )
+position = Vector2( 7.14286, 4.28571 )
 shape = SubResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
@@ -133,4 +133,5 @@ rotation_speed = 0.06
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/main_left = SubResource( 4 )
 anims/main_right = SubResource( 5 )
+[connection signal="area_entered" from="Hitbox" to="." method="_on_Hitbox_area_entered"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_Hitbox_body_entered"]

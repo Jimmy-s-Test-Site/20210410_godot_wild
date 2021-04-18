@@ -12,11 +12,13 @@ func _ready():
 func load_level(n : int) -> void:
 	if self.level != null:
 		self.level.disconnect("goto_next", self, "on_level_goto_next")
+		self.level.disconnect("repeat", self, "on_level_repeat")
 		self.level.queue_free()
 	
 	self.level_index = n
 	self.level = self.levels[n].instance()
 	self.level.connect("goto_next", self, "on_level_goto_next")
+	self.level.connect("repeat", self, "on_level_repeat")
 	
 	# this fucker right here almost killed me
 	# if you get errors about collisions or whatever, remember this line
@@ -25,3 +27,6 @@ func load_level(n : int) -> void:
 
 func on_level_goto_next() -> void:
 	self.load_level((self.level_index + 1) % self.levels.size())
+
+func on_level_repeat() -> void:
+	self.load_level(self.level_index);
