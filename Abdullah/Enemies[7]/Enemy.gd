@@ -6,7 +6,7 @@ signal hit_player
 
 export (NodePath) var player_character_path
 
-onready var player_character = self.get_node(player_character_path)
+onready var player_character = self.get_node_or_null(player_character_path)
 
 export (int) var  movement_speed = 100
 
