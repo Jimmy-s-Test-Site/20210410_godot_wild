@@ -4,8 +4,9 @@
 [ext_resource path="res://Julian/Character/Character.gd" type="Script" id=2]
 [ext_resource path="res://Julian/Character/LaserBeam2D.tscn" type="PackedScene" id=4]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20, 28 )
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 17.2857
+height = 30.2857
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 25, 28 )
@@ -110,7 +111,7 @@ texture = ExtResource( 1 )
 hframes = 11
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 7, 1 )
+position = Vector2( 7.14286, 4.28571 )
 shape = SubResource( 1 )
 
 [node name="Hitbox" type="Area2D" parent="."]
