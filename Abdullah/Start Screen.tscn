@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Abdullah/Label.gd" type="Script" id=1]
 [ext_resource path="res://Art/Backgrounds/big volcano.png" type="Texture" id=2]
+[ext_resource path="res://Abdullah/Start Screen.gd" type="Script" id=3]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -53,5 +55,6 @@ text = "START"
 position = Vector2( 747.023, 412.116 )
 scale = Vector2( 0.1, 0.1 )
 texture = ExtResource( 2 )
+[connection signal="goto_next" from="Panel/Label" to="." method="_on_Label_goto_next"]
 [connection signal="timeout" from="Panel/Label/Timer" to="Panel/Label" method="_on_Timer_timeout"]
 [connection signal="pressed" from="Panel/Label/Button" to="Panel/Label" method="_on_Button_pressed"]
