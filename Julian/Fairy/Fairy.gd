@@ -33,7 +33,13 @@ func _physics_process(delta : float) -> void:
 
 func movement_manager(delta : float) -> void:
 	if self.get_player() != null:
-		var direction_to_move = (self.get_player().position - self.position).normalized()
+		var direction_to_player = self.get_player().position - self.position
+		
+		if direction_to_player.length() < 74:
+			return
+		
+		var direction_to_move = direction_to_player.normalized()
+		
 		self.facing_direction = sign(direction_to_move.x)
 		
 		self.movement = direction_to_move
