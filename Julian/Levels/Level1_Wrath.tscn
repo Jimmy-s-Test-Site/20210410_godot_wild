@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Aubrie/Maps/Map1_Wrath.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Julian/Character/Character.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Julian/Fairy/FireRing.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Julian/Fairy/Fairy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Abdullah/Enemies[7]/Minion_Wrath.tscn" type="PackedScene" id=8]
 
 [node name="Level1_Wrath" type="Node2D"]
 script = ExtResource( 4 )
@@ -49,5 +50,37 @@ stream = ExtResource( 3 )
 volume_db = -10.876
 
 [node name="Enemies" type="Node2D" parent="."]
+
+[node name="Enemy" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 1007.54, 2502.43 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 622.435, 2111.67 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 387.829, 1372.21 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 1440.7, 1360.99 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 812.8, 719.875 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 1297.95, 902.986 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 1411.51, 2121.11 )
+player_character_path = NodePath("../../Character")
+
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 1286.92, 1736.01 )
+player_character_path = NodePath("../../Character")
 [connection signal="teleport" from="SlotMachine" to="." method="_on_SlotMachine_teleport"]
 [connection signal="die" from="Character" to="." method="_on_Character_die"]
