@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Julian/Game/Game.gd" type="Script" id=1]
 [ext_resource path="res://Julian/Levels/Level1_Wrath.tscn" type="PackedScene" id=2]
@@ -11,7 +11,19 @@
 [ext_resource path="res://Abdullah/Start Screen.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Abdullah/End_Screen.tscn" type="PackedScene" id=10]
 
+[sub_resource type="Environment" id=1]
+background_mode = 4
+glow_enabled = true
+glow_levels/4 = true
+glow_intensity = 0.6
+glow_blend_mode = 0
+glow_hdr_luminance_cap = 2.0
+glow_bicubic_upscale = true
+
 [node name="Game" type="Node2D"]
 script = ExtResource( 1 )
 start_at = 1
 levels = [ ExtResource( 9 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 8 ), ExtResource( 10 ) ]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
