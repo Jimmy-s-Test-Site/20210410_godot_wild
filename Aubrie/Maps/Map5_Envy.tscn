@@ -1,8 +1,9 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Art/x marks trap.png" type="Texture" id=1]
 [ext_resource path="res://Art/icon.png" type="Texture" id=2]
 [ext_resource path="res://Art/Atlas's of each map/Level Five, Six, Seven Green Grass Map.png" type="Texture" id=3]
+[ext_resource path="res://Art/Backgrounds/green grass.png" type="Texture" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -454,6 +455,51 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 0/z_index = 0
 
 [node name="Map5_Envy" type="Node2D"]
+
+[node name="green grass2" type="Sprite" parent="."]
+position = Vector2( -2266.2, 2081.95 )
+scale = Vector2( 0.130602, 0.130202 )
+texture = ExtResource( 4 )
+
+[node name="green grass3" type="Sprite" parent="."]
+position = Vector2( -2417.14, 2916.96 )
+scale = Vector2( 0.148289, 0.234085 )
+texture = ExtResource( 4 )
+
+[node name="green grass4" type="Sprite" parent="."]
+position = Vector2( -2227.14, 2978.96 )
+scale = Vector2( 0.148289, 0.234085 )
+texture = ExtResource( 4 )
+
+[node name="green grass5" type="Sprite" parent="."]
+position = Vector2( -1756.48, 3234.98 )
+scale = Vector2( 0.179804, 0.234085 )
+texture = ExtResource( 4 )
+
+[node name="green grass6" type="Sprite" parent="."]
+position = Vector2( -1145.13, 3229.64 )
+scale = Vector2( 0.179804, 0.234085 )
+texture = ExtResource( 4 )
+
+[node name="green grass" type="Sprite" parent="."]
+position = Vector2( -640.577, 2723.06 )
+scale = Vector2( 0.12632, 0.121027 )
+texture = ExtResource( 4 )
+
+[node name="green grass7" type="Sprite" parent="."]
+position = Vector2( -1485.53, 3299.72 )
+scale = Vector2( 0.12632, 0.121027 )
+texture = ExtResource( 4 )
+
+[node name="green grass8" type="Sprite" parent="."]
+position = Vector2( -768.278, 3171.75 )
+scale = Vector2( 0.12632, 0.121027 )
+texture = ExtResource( 4 )
+
+[node name="green grass9" type="Sprite" parent="."]
+position = Vector2( -770.523, 3170.63 )
+scale = Vector2( 0.12632, 0.121027 )
+texture = ExtResource( 4 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 48 )
