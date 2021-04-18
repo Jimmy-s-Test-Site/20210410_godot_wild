@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Aubrie/Maps/Map1_Wrath.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Julian/Character/Character.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Julian/SlotMachine/SlotMachine.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Julian/Fairy/FireRing.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Julian/Fairy/Fairy.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Julian/Fairy/SpawnPoint.tscn" type="PackedScene" id=8]
 
 [node name="Level1_Wrath" type="Node2D"]
 script = ExtResource( 4 )
@@ -28,6 +29,9 @@ fire_rings_path = NodePath("../FireRings")
 speed = 8000
 
 [node name="SpawnPoints" type="Node2D" parent="."]
+
+[node name="SpawnPoint" parent="SpawnPoints" instance=ExtResource( 8 )]
+position = Vector2( 978, 2546 )
 
 [node name="FireRings" type="Node2D" parent="."]
 
