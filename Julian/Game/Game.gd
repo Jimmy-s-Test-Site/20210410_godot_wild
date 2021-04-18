@@ -3,7 +3,7 @@ extends Node2D
 export(Array, PackedScene) var levels
 
 var level_index = -1
-var level : Node2D = null
+var level = null
 
 func _ready():
 	self.load_level(0)
@@ -23,4 +23,4 @@ func load_level(n : int) -> void:
 	self.call_deferred("add_child", self.level)
 
 func on_level_goto_next() -> void:
-	self.load_level((self.level_index + 1) % self.level.size())
+	self.load_level((self.level_index + 1) % self.levels.size())
